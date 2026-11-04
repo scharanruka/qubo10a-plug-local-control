@@ -1,0 +1,6 @@
+[project]
+name = "qubo-poller"
+version = "0.1.0"
+description = "Poll a Qubo HSP02 smart plug over BLE and publish to Home Assistant via MQTT"
+requires-python = ">=3.11"
+dependencies = ["paho-mqtt>=2.0", "cryptography>=42.0"]

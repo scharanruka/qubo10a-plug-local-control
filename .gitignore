@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+
+# vendor APK, only needed to re-derive the protocol; not redistributable
+base.apk
+*.apk

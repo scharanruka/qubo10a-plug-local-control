@@ -1,0 +1,14 @@
+[Unit]
+Description=Qubo HSP02 smart plug BLE poller -> MQTT
+# bluetooth.service is a system unit; ordering does not cross managers, so just retry.
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=%h/qubo10a-plug-firmware
+ExecStart=%h/qubo10a-plug-firmware/.venv/bin/python qubo_poller.py --interval 5
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
